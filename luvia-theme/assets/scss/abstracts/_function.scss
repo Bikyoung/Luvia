@@ -1,0 +1,6 @@
+@use "./variables" as vars;
+
+// 특정 카테고리의 map 객체를 추출하는 함수
+@function getVarObj($target-map, $category) {
+    @return map-get($target-map, $category);
+}

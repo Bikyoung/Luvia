@@ -1,0 +1,51 @@
+@use "../abstracts/bundle" as abs;
+
+.hero {
+    @include abs.resSpacing(padding, spacing-sm);
+
+    padding-top: 10.2rem;
+    
+    @media (max-width: map-get(abs.$break-points, laptop)) {
+        padding-top: 9rem;
+    }
+
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        padding-top: 8rem;
+    }
+
+    &__container {
+        @include abs.resSpacing(padding-top, spacing-xxl);
+        @include abs.resSpacing(padding-bottom, spacing-xxl);
+        @include abs.resRadius(border-bottom-left-radius, radius);
+        @include abs.resSpacing(gap, spacing-md);
+
+        display: flex;
+        flex-direction: column;
+        background-image: url("../images/hero_bg.webp");
+        position: relative;
+
+        &::before {
+            @include abs.resRadius(border-bottom-left-radius, radius);
+
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.4) 90%);
+
+        }
+    }
+
+    &__title, &__desc {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__title {
+        text-shadow: 0.4rem 0 0 map-get(abs.$colors, primary);
+
+    }
+}

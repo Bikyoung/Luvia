@@ -1,0 +1,39 @@
+@use "../abstracts/bundle" as abs;
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: map-get(abs.$colors, white-50);
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+
+    .menu {
+        &-list {
+            @include abs.resSpacing(gap, spacing-sm);
+
+            @media (max-width: map-get(abs.$break-points, tablet)) {
+                display: none;
+            }
+        }
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4rem;
+            padding: 0 2rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                box-shadow: inset 0 -0.2rem 0 map-get(abs.$colors, primary);
+            }
+
+            @media (max-width: map-get(abs.$break-points, laptop)) {
+                padding: 0 1.5rem;
+            }
+        }
+    }
+
+}

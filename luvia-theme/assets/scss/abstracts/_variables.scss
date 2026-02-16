@@ -1,0 +1,149 @@
+// --------------- break-points ---------------
+$break-points: (
+    laptop: 1023px,
+    tablet: 767px,
+    mobile: 479px
+);
+
+// --------------- colors ---------------
+$colors: (
+    primary: #80B5B1,
+    primary-hover: #DAF0EE,
+    gray-100: #3C3C3C,
+    gray-50: #9F9F9F,
+    white-50: #FFFFFF,
+    white-100: #ffffffcc,
+    black: #121212,
+    mint: #BBEBE2,
+    green: #4D6D6A,
+    mint-gradient: linear-gradient(30deg, #DDEEED 0%, #F7FBF9 25%, #FFFFFF 100%),
+    mint-reverse-gradient: linear-gradient(150deg, #FFFFFF 0%, #F7FBF9 75%, #DDEEED 100%),
+);
+
+// --------------- font-size ---------------
+$font-size: (
+    display: (
+        desktop: 5.8rem,
+        laptop: 5rem,
+        tablet: 4rem,
+        mobile: 3.4rem
+    ),
+
+    main-title1: (
+        desktop: 4rem,
+        laptop: 3.8rem,
+        tablet: 3.6rem,
+        mobile: 3.2rem
+    ),
+    
+    main-title2: (
+        desktop: 3rem,
+        laptop: 2.8rem,
+        tablet: 2.6rem,
+        mobile: 2.4rem
+    ),
+
+    sub-title: (
+        desktop: 2.6rem,
+        laptop: 2.4rem,
+        tablet: 2.2rem,
+        mobile: 2rem
+    ),
+
+    body1: (
+        desktop: 2.4rem,
+        laptop: 2rem,
+        tablet: 1.6rem,
+        mobile: 1.4rem        
+    ),
+    
+    body2: (
+        desktop: 2rem,
+        laptop: 1.8rem,
+        tablet: 1.6rem,
+        mobile: 1.6rem        
+    ),
+    
+    body3: (
+        desktop: 1.6rem,
+        laptop: 1.6rem,
+        tablet: 1.5rem,
+        mobile: 1.4rem        
+    ),
+
+    button1: (
+        desktop: 2rem,
+        laptop: 2rem,
+        tablet: 1.8rem,
+        mobile: 1.8rem   
+    ),
+
+    button2: (
+        desktop: 1.8rem,
+        laptop: 1.8rem,
+        tablet: 1.6rem,
+        mobile: 1.6rem        
+    )
+);
+
+// --------------- spacing ---------------
+$spacing: (
+    spacing-xxl: (
+        desktop: 20rem,
+        laptop: 18rem,
+        tablet: 15rem    
+    ),
+
+    spacing-xl: (
+        desktop: 12rem,
+        laptop: 10rem,
+        tablet: 8rem    
+    ),
+
+    spacing-lg: (
+        desktop: 8rem,
+        laptop: 3.2rem,
+        tablet: 1.6rem
+    ),
+
+    spacing-md: (
+        desktop: 6rem,
+        laptop: 5rem,
+        tablet: 4rem    
+    ),
+
+    spacing-sm: (
+        desktop: 3rem,
+        laptop: 2.5rem,
+        tablet: 2rem
+    ),
+
+    spacing-xs: (
+        desktop: 1.5rem,
+        laptop: 1rem,
+        tablet: 0.8rem
+    ),
+    
+    spacing-xxs: (
+        desktop: 1rem,
+        laptop: 0.8rem,
+        tablet: 0.4rem
+    )
+);
+
+// --------------- border-radius ---------------
+$border-radius: (
+    radius: (
+        desktop: 200px,
+        laptop: 150px,
+        tablet: 100px
+    ),
+);
+
+// --------------- max-width ---------------
+$max-width: (
+    desktop: 1440px,
+    laptop: 960px,
+    tablet: 720px,
+    mobile: 440px
+)

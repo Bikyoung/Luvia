@@ -1,0 +1,42 @@
+@use "../abstracts/bundle" as abs;
+
+.about {
+    background: map-get(abs.$colors, mint-gradient);
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 0.667rem + 0.434vw, 1.5rem);
+    }
+
+    &__cta {
+        @include abs.resSpacing(margin-top, spacing-md);
+    }
+
+    &__image {
+        background-image: url("../images/about_image.webp");
+        width: clamp(40rem, 34.286rem + 5.58vw, 45rem);
+        aspect-ratio: 1.18 / 1;
+        border-radius: 2rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 2rem;
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+        }
+
+        @media (max-width: map-get(abs.$break-points, laptop)) {
+            width: clamp(30rem, 14.941rem + 19.608vw, 35rem);
+        }
+
+        @media (max-width: map-get(abs.$break-points, tablet)) {
+            width: clamp(30rem, 13.275rem + 34.843vw, 40rem);
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@use "../abstracts/bundle" as abs;
+
+.treatment {
+    background: #F9FCFA;
+
+    &__container {
+        @include abs.resSpacing(gap, spacing-xl);
+
+        flex-direction: column;
+        align-items: start;
+
+        @media (max-width: map-get(abs.$break-points, tablet)) {
+            align-items: center;
+        }
+    }
+
+    &__tab {
+        &-container {
+            @include abs.resSpacing(gap, spacing-md);
+    
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &-list {
+            width: 100%;
+            overflow: auto;
+            justify-content: space-between;
+            border-bottom: 0.1rem solid map-get(abs.$colors, gray-50);
+        }
+    
+        &-item {
+            background: transparent;
+            border: none;
+            padding: 1.5rem;
+            padding-top: 0;
+            text-wrap: nowrap;
+    
+            &[aria-selected="true"] {
+                color: map-get(abs.$colors, primary);
+                font-weight: 700;
+                border-bottom: 0.2rem solid map-get(abs.$colors, primary)
+            }
+        }
+    }
+
+    &__panel {
+        &.show {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-text {
+            @include abs.resSpacing(gap, spacing-sm);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-image {
+            width: clamp(30rem, 21.667rem + 17.361vw, 55rem);
+            aspect-ratio: 11 / 6;
+            border-radius: 2rem;
+        }
+
+        &-cta {
+            @include abs.resSpacing(margin-top, spacing-sm);
+
+            width: fit-content;
+        }
+
+        @media (max-width: map-get(abs.$break-points, tablet)) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 4rem;
+        }
+    }
+
+
+
+}

@@ -1,0 +1,120 @@
+@use "../abstracts/bundle" as abs;
+
+html {
+    // 1rem = 10px
+    font-size: 62.5%;   
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+}
+
+h1, .sub-title {
+    font-family: "Marcellus";
+}
+
+.main-title {
+    @include abs.fontStyle(main-title1, 700, 1.25, -0.01em, map-get(abs.$colors, black));
+}
+
+.sub-title {
+    @include abs.fontStyle(sub-title, 400, 1.25, 0em, map-get(abs.$colors, primary));
+}
+
+.desc {
+    @include abs.fontStyle(body3, 400, 1.4, 0.01em, map-get(abs.$colors, black));
+}
+
+.cta {
+    @include abs.fontStyle(button2, 500, 1.4, 0.01em, map-get(abs.$colors, primary));
+}
+
+.menu-item a {
+    @include abs.fontStyle(body2, 600, 1.4, 0.01em, map-get(abs.$colors, black));      
+}
+
+// --------------- hero ---------------
+.hero {
+    &__title {
+        @include abs.fontStyle(display, 400, 1.1, -0.01em, map-get(abs.$colors, white-50));
+    }
+
+    &__desc {
+        @include abs.fontStyle(body1, 700, 1.2, 0em, map-get(abs.$colors, white-50));
+    }
+}
+
+// --------------- director ---------------
+.director {
+    &__main-title {
+        letter-spacing: 0.03em;
+    }
+
+    .role {
+        @include abs.fontStyle(main-title2, 400, 1.25, -0.01em, map-get(abs.$colors, black));
+    }
+
+    &__message {
+        @include abs.fontStyle(body3, 500, 1.4, 0em, map-get(abs.$colors, black));
+    }
+
+    &__career {
+        @include abs.fontStyle(body3, 500, 1.4, 0em, map-get(abs.$colors, gray-100));
+    }
+}
+
+// --------------- treatment ---------------
+.treatment {
+    &__tab-item {
+        @include abs.fontStyle(button1, 500, 1.4, -0.01em, map-get(abs.$colors, gray-50));
+    }
+
+    &__panel {
+        &-title {
+            @include abs.fontStyle(main-title2, 700, 1.25, -0.01em, map-get(abs.$colors, black));
+        }
+
+        &-desc {
+            @include abs.fontStyle(body3, 400, 1.4, 0.01em, map-get(abs.$colors, black));
+        }
+    }
+}
+
+// --------------- equipment ---------------
+.equipment {
+    .slide{
+        &__title {
+            @include abs.fontStyle(body2, 500, 1.4, 0.01em, map-get(abs.$colors, black));
+        }
+
+        &__desc {
+            @include abs.fontStyle(body3, 400, 1.4, 0.01em, map-get(abs.$colors, gray-100));
+        }
+    }
+}
+
+// --------------- event ---------------
+.event {
+    &__sub-title {
+        @include abs.fontStyle(body2, 400, 1.4, 0.01em, map-get(abs.$colors, black));
+    }
+
+    &__desc {
+        @include abs.fontStyle(body3, 700, 1.4, 0.01em, map-get(abs.$colors, black));
+    }
+}
+
+// --------------- footer ---------------
+.footer {
+    &__title {
+        @include abs.fontStyle(body2, 700, 1.4, 0.01em, map-get(abs.$colors, white-50));
+    }
+
+    &__desc {
+        @include abs.fontStyle(body3, 400, 1.4, 0.01em, map-get(abs.$colors, white-100));
+    }
+
+    &__label {
+        @include abs.fontStyle(body3, 500, 1.4, 0.01em, map-get(abs.$colors, white-50));
+    }
+}

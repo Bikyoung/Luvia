@@ -1,0 +1,16 @@
+@use "../abstracts/bundle" as abs;
+
+.cta {
+    border-radius: 5rem;
+    padding: 1rem 5rem;
+    border: 0.2rem solid map-get(abs.$colors, primary);
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        padding: 1rem 4rem;
+    }
+
+    &:hover {
+        background-color: map-get(abs.$colors, primary-hover);
+    }
+}

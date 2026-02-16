@@ -1,0 +1,62 @@
+@use "./variables" as vars;
+@use "./function" as fn;
+
+// 폰트 관련 스타일을 정의하는 믹스인
+@mixin fontStyle($category, $fontWeight, $lineHeight, $letterSpacing, $color) {
+    // $font-size 맵에서 특정 카테고리(ex: display)의 map 객체를 추출하여 저장
+    $fontVarObj: fn.getVarObj(vars.$font-size, $category);
+
+    font-size: map-get($fontVarObj, desktop);
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+    color: $color;
+
+    // font-size 자동 반응형 처리
+    @each $bp in (laptop, tablet, mobile) {
+        @media (max-width: map-get(vars.$break-points, $bp)) {
+            font-size: map-get($fontVarObj, $bp);
+        }
+    }
+}
+
+// 원하는 CSS 속성에 반응형으로 여백을 지정하는 믹스인  
+@mixin resSpacing($spaceProp, $category) {
+    // $spacing 맵에서 특정 카테고리(ex: spacing-lg)의 map 객체를 추출하여 저장
+    $spaceVarObj: fn.getVarObj(vars.$spacing, $category); 
+
+    // #{scss 변수}: scss 변수 값을 css 속성으로 지정
+    #{$spaceProp}: map-get($spaceVarObj, desktop);
+
+    @each $bp in (laptop, tablet) {
+        @media (max-width: map-get(vars.$break-points, $bp)) {
+            #{$spaceProp}: map-get($spaceVarObj, $bp);
+        }
+    }
+}
+
+// 원하는 CSS 속성에 반응형으로 border-radius를 지정하는 믹스인
+@mixin resRadius($radiusProp, $category) {
+    $radiusVarObj: fn.getVarObj(vars.$border-radius, $category);
+
+    #{$radiusProp}: map-get($radiusVarObj, desktop);
+
+    @each $bp in (laptop, tablet) {
+        @media (max-width: map-get(vars.$break-points, $bp)) {
+            #{$radiusProp}: map-get($radiusVarObj, $bp)
+        }
+    }
+}
+
+@mixin resMaxWidth() {
+    max-width: map-get(vars.$max-width, desktop);
+
+    @each $bp in (laptop, tablet, mobile) {
+        @media (max-width: map-get(vars.$break-points, $bp)) {
+            max-width: map-get(vars.$max-width, $bp);
+        }
+    }
+}
+
+
+

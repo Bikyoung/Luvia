@@ -1,0 +1,65 @@
+@use "../abstracts/bundle" as abs;
+
+.footer {
+    background-color: map-get(abs.$colors, green);
+
+    &__container {
+        align-items: start;
+
+        @media (max-width: map-get(abs.$break-points, laptop)) {
+            @include abs.resSpacing(gap, spacing-xl);
+
+            flex-direction: column;
+        }
+    }
+
+    &__section {
+        @include abs.resSpacing(gap, spacing-sm);
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__location {
+        @media (max-width: map-get(abs.$break-points, laptop)) {
+            width: 100%;
+        }
+
+        &-text {
+            @include abs.resSpacing(gap, spacing-xs);
+
+            @media (max-width: map-get(abs.$break-points, mobile)) {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        &-map {
+            width: clamp(45rem, 27.893rem + 16.722vw, 60rem);
+            height: 25rem;
+            border-radius: 1rem;
+
+            @media (max-width: map-get(abs.$break-points, laptop)) {
+                max-width: 80rem;
+                width: 100%;
+            }
+
+            @media (max-width: map-get(abs.$break-points, mobile)) {
+                height: 20rem;
+            }
+        }
+    }
+
+    &__contact-content {
+        @include abs.resSpacing(gap, spacing-xs);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        width: 12rem;
+        display: inline-block;
+    }
+}

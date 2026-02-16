@@ -1,0 +1,33 @@
+@use "../abstracts/bundle" as abs;
+
+.container {
+    @include abs.resSpacing(padding-top, spacing-xl);
+    @include abs.resSpacing(padding-bottom, spacing-xl);
+    @include abs.resSpacing(padding-left, spacing-lg);
+    @include abs.resSpacing(padding-right, spacing-lg);
+
+    width: 100%;
+}
+
+.max-container {
+    @include abs.resMaxWidth();
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+    }
+}
+
+.header__container, .footer__container, .slide-menu__head {
+    @include abs.resSpacing(padding-top, spacing-sm);
+    @include abs.resSpacing(padding-bottom, spacing-sm);
+
+    display: flex;
+    justify-content: space-between;
+}

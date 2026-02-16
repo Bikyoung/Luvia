@@ -1,0 +1,77 @@
+@use "../abstracts/bundle" as abs;
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: transparent;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.only-mob {
+    display: none;
+
+    @media (max-width: map-get(abs.$break-points, mobile)) {
+        display: block;
+    }
+}
+
+.only-tablet {
+    display: none;
+
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        display: block;
+    }    
+}
+
+.bg-center {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;    
+}
+
+.main-title {
+    @include abs.resSpacing(margin-top, spacing-md);
+    @include abs.resSpacing(margin-bottom, spacing-sm);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.logo-image {
+    height: clamp(3rem, 1.857rem + 1.116vw, 4rem);
+}
+
+.hamburger-btn, .close-btn {
+    i {
+        font-size: clamp(2rem, 1.168rem + 1.736vw, 2.5rem);
+    }
+
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}

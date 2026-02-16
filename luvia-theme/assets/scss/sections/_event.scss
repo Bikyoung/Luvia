@@ -1,0 +1,84 @@
+@use "../abstracts/bundle" as abs;
+
+.event {
+    background: linear-gradient(180deg, #DDEEED 0%, #DDEEED 50%, #FFFFFF 75%, #FFFFFF 100%);
+
+    &__container {
+        @include abs.resSpacing(gap, spacing-xl);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        text-align: center;
+    }
+
+    &__main-title {
+        @include abs.resSpacing(margin-bottom, spacing-xxs);
+
+        font-family: "Marcellus";
+        color: map-get(abs.$colors, primary);
+    }
+
+    &__list {
+        @include abs.resSpacing(padding, spacing-sm);
+
+        width: 100%;
+        justify-content: space-between;
+        background-color: map-get(abs.$colors, white-50);
+        box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+    }
+
+    &__item {
+        @include abs.resSpacing(gap, spacing-sm);
+
+        flex-direction: column;
+    }
+
+    &__image {
+        height: 30rem;
+    }
+
+    &__cta {
+        padding: 1rem 5rem;
+    }
+
+    @media (max-width: 1439px) {
+        &__list {
+            @include abs.resSpacing(gap, spacing-sm);
+
+            width: 45rem;
+            flex-direction: column;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: map-get(abs.$break-points, tablet)) {
+        &__list {
+            width: 40rem;
+        }
+
+        &__image {
+            height: 25rem;
+        }
+
+        &__cta {
+            padding: 1rem 4rem;
+        }
+    }
+
+    @media (max-width: map-get(abs.$break-points, mobile)) {
+        &__list {
+            width: 30rem;
+        }
+
+        &__image {
+            height: 20rem;
+        }
+    }
+}
