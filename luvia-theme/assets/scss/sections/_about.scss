@@ -14,7 +14,6 @@
     }
 
     &__image {
-        background-image: url("../images/about_image.webp");
         width: clamp(40rem, 34.286rem + 5.58vw, 45rem);
         aspect-ratio: 1.18 / 1;
         border-radius: 2rem;
