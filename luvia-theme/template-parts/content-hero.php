@@ -1,5 +1,5 @@
 <?php 
-    $hero_bg_url = get_theme_mod( 'hero_bg', get_template_directory_uri() . '/assets/images/hero_bg.webp');
+$hero_bg_url = get_theme_mod( 'hero_bg', get_template_directory_uri() . '/assets/images/hero_bg.webp');
 ?>
 
 <section id="hero" class="hero">

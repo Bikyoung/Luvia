@@ -16,12 +16,12 @@
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <?php if( has_custom_logo() ) : ?>
                         <?php 
-                            // DB에 저장된 로고 이미지의 id
-                            $custom_logo_id = get_theme_mod( 'custom_logo' ); 
-                            // id 값을 활용하여 이미지가 저장된 url과 원본 사이즈 정보를 가져옴
-                            $custom_logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-                            // 로고 이미지의 url($custom_logo_src의 0번째 원소)을 사용하여 img 태그 출력
-                            echo '<img src="' . $custom_logo_src[0] . '" class="logo-image" alt="로고 이미지">';
+                        // DB에 저장된 로고 이미지의 id
+                        $custom_logo_id = get_theme_mod( 'custom_logo' ); 
+                        // id 값을 활용하여 이미지가 저장된 url과 원본 사이즈 정보를 가져옴
+                        $custom_logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+                        // 로고 이미지의 url($custom_logo_src의 0번째 원소)을 사용하여 img 태그 출력
+                        echo '<img src="' . $custom_logo_src[0] . '" class="logo-image" alt="로고 이미지">';
                         ?>
                     <?php else : ?>
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/logo_green.webp'; ?>" class="logo-image" alt="초록색 로고 이미지">

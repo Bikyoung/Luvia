@@ -44,33 +44,32 @@
                     </h3>
                     <ul class="footer__contact-content">
                         <?php 
-                            $contact_items = array(
-                                'contact_tel' => array( 'label' => '대표번호', 'default' => '000-0000-0000' ),
-                                'contact_fax' => array( 'label' => '팩스번호', 'default' => '000-0000-0000' ),
-                                'contact_owner' => array( 'label' => '대표자', 'default' => '홍길동' ),
-                                'contact_reg_num' => array( 'label' => '사업자등록번호', 'default' => '000-00-00000'),
-                                'contact_email' => array( 'label' => '이메일', 'default' => '' ),
-                                'contact_copy' => array( 'label' => '의료심의필번호', 'default' => '' )
-                            );
+                        $contact_items = array(
+                            'contact_tel' => array( 'label' => '대표번호', 'default' => '000-0000-0000' ),
+                            'contact_fax' => array( 'label' => '팩스번호', 'default' => '000-0000-0000' ),
+                            'contact_owner' => array( 'label' => '대표자', 'default' => '홍길동' ),
+                            'contact_reg_num' => array( 'label' => '사업자등록번호', 'default' => '000-00-00000'),
+                            'contact_email' => array( 'label' => '이메일', 'default' => '' ),
+                            'contact_copy' => array( 'label' => '의료심의필번호', 'default' => '' )
+                        );
 
-                            foreach ( $contact_items as $id => $info ) :
-                                $value = get_theme_mod( $id, $info['default']);
+                        foreach ( $contact_items as $id => $info ) :
+                            $value = get_theme_mod( $id, $info['default']);
 
-                                // 값이 존재하는 경우만 화면에 출력
-                                if( ! empty( $value ) ) :
-
+                            // 값이 존재하는 경우만 화면에 출력
+                            if( ! empty( $value ) ) :
                         ?>
-                            <li>
-                                <span class="footer__label">
-                                    <?php echo esc_html( $info['label'] ); ?>
-                                </span>
-                                <span class="footer__desc">
-                                    <?php echo esc_html( $value ); ?>
-                                </span>
-                            </li>
+                                <li>
+                                    <span class="footer__label">
+                                        <?php echo esc_html( $info['label'] ); ?>
+                                    </span>
+                                    <span class="footer__desc">
+                                        <?php echo esc_html( $value ); ?>
+                                    </span>
+                                </li>
                         <?php 
-                                endif;
-                            endforeach; ?>
+                            endif;
+                        endforeach; ?>
                     </ul>
             </div>
         </div>
