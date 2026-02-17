@@ -9,7 +9,7 @@
 <?php wp_body_open(); ?>
 
 <div id="page" class="site">
-    <header id="masthead" class="site-header header" role="banner">
+    <header id="masthead" class="site-header header">
         <div class="flex-center container header__container">
             <!-- 로고 영역 -->
             <div class="site-branding">
@@ -30,12 +30,14 @@
             </div>
             <!-- 네비게이션 영역 -->
             <nav id="site-navigation" class="main-navigation" aria-label="주요 메뉴">
-                <?php wp_nav_menu( array (
+                <?php 
+                wp_nav_menu( array (
                     'theme_location' => 'primary',  // db의 데이터를 불러오기 위한 데이터 연결용 id
                     'menu_id' => 'primary-menu',    // css, js에서 활용하기 위한 용도의 id
                     'container' => false,           // ul 태그를 div로 감쌀지 여부
                     'menu_class' => 'flex-center menu-list' // 기본으로 제공되는 클래스명인 menu에 클래스명을 더 추가
-                )); ?>
+                ) ); 
+                ?>
             </nav>
             <!-- 햄버거 버튼 -->
             <button class="only-tablet hamburger-btn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="slide-menu">
