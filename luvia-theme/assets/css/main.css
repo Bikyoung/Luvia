@@ -901,7 +901,6 @@ button {
 .hero__container {
   display: flex;
   flex-direction: column;
-  background-image: url("../images/hero_bg.webp");
   position: relative;
 }
 .hero__container::before {
