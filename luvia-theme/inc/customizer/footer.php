@@ -3,7 +3,7 @@
 function register_footer_setting_customize( $wp_customize ) {
     // 푸터의 여러 정보를 통합 관리하기 위한 섹션 생성 
     $wp_customize->add_section( 'footer_info', array(
-        'title' => '푸터 정보 관리', 
+        'title' => esc_html__( '푸터 정보 관리', 'luvia' ),
         'priority' => 120 
     ) );
 
@@ -15,8 +15,8 @@ function register_footer_setting_customize( $wp_customize ) {
         $wp_customize,
         'footer_logo',  // 컨트롤의 고유 id (setting과 동일한 이름을 사용하는 것이 관례)
         array(
-            'label' => '푸터 로고 업로드',
-            'description' => '권장 사이즈: 120x40px (유연한 조절 가능)',
+            'label' => esc_html__( '푸터 로고 업로드', 'luvia' ),
+            'description' => esc_html__( '권장 사이즈: 120x40px (유연한 조절 가능)', 'luvia' ),
             'section' => 'title_tagline',
             // 이 컨트롤을 통해 업로드한 데이터를 어느 저장소에 저장할지 결정
             'settings' => 'footer_logo'
@@ -29,8 +29,8 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'      // 관리자가 입력한 데이터를 정제 
     ) );
     $wp_customize->add_control( 'address_title', array(
-        'label' => '위치 섹션 제목',
-        'description' => '위치 섹션의 제목을 입력하세요',
+        'label' => esc_html__( '위치 섹션 제목', 'luvia' ),
+        'description' => esc_html__( '위치 섹션의 제목을 입력하세요', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'address_title',
@@ -43,8 +43,8 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_textarea_field'
     ) );
     $wp_customize->add_control( 'address_desc', array(
-        'label' => '위치 섹션 내용',
-        'description' => '위치 섹션의 내용을 입력하세요',
+        'label' => esc_html__( '위치 섹션 내용', 'luvia' ),
+        'description' => esc_html__( '위치 섹션의 내용을 입력하세요', 'luvia' ),
         'type' => 'textarea',
         'section' => 'footer_info',
         'settings' => 'address_desc',
@@ -57,8 +57,8 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'contact_title', array(
-        'label' => '연락처 섹션 제목',
-        'description' => '연락처 섹션의 제목을 입력하세요',
+        'label' => esc_html__( '연락처 섹션 제목', 'luvia' ),
+        'description' => esc_html__( '연락처 섹션의 제목을 입력하세요', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_title',
@@ -71,7 +71,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_tel', array(
-        'label' => '대표번호',
+        'label' => esc_html__( '대표번호', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_tel',
@@ -84,7 +84,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_fax', array(
-        'label' => '팩스번호',
+        'label' => esc_html__( '팩스번호', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_fax',
@@ -97,7 +97,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_owner', array(
-        'label' => '대표자',
+        'label' => esc_html__( '대표자', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_owner',
@@ -110,7 +110,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_reg_num', array(
-        'label' => '사업자등록번호',
+        'label' => esc_html__( '사업자등록번호', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_reg_num',
@@ -123,7 +123,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_email', array(
-        'label' => '이메일',
+        'label' => esc_html__( '이메일', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_email',
@@ -136,7 +136,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) ); 
     $wp_customize->add_control( 'contact_copy', array(
-        'label' => '의료심의필번호',
+        'label' => esc_html__( '의료심의필번호', 'luvia' ),
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_copy',

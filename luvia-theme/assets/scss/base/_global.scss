@@ -13,6 +13,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    object-fit: cover;
+}
+
 .only-mob {
     display: none;
 

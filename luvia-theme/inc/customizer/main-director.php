@@ -2,7 +2,7 @@
 // director 영역을 Customizer에서 관리할 수 있도록 설정 항목을 등록하는 함수
 function register_director_setting_customize( $wp_customize ) {
     $wp_customize->add_section( 'director_info', array(
-        'title' => '의료진 영역 정보 관리',
+        'title' => esc_html__( '의료진 영역 정보 관리', 'luvia' ),
         'panel' => 'main_page_panel',
         'priority' => 3
     ) );    
@@ -13,7 +13,7 @@ function register_director_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'director_subtitle', array (
-        'label' => '의료진 영역 작은 제목',
+        'label' => esc_html__( '의료진 영역 작은 제목', 'luvia' ),
         'type' => 'text',
         'section' => 'director_info',
         'settings' => 'director_subtitle',
@@ -26,7 +26,7 @@ function register_director_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'director_name', array (
-        'label' => '의료진 이름',
+        'label' => esc_html__( '의료진 이름', 'luvia' ),
         'type' => 'text',
         'section' => 'director_info',
         'settings' => 'director_name',
@@ -39,7 +39,7 @@ function register_director_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'director_role', array (
-        'label' => '의료진 직책',
+        'label' => esc_html__( '의료진 직책', 'luvia' ),
         'type' => 'text',
         'section' => 'director_info',
         'settings' => 'director_role',
@@ -52,7 +52,7 @@ function register_director_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'wp_kses_post'
     ) );
     $wp_customize->add_control( 'director_message', array (
-        'label' => '의료진 메시지',
+        'label' => esc_html__( '의료진 메시지', 'luvia' ),
         'type' => 'textarea',
         'section' => 'director_info',
         'settings' => 'director_message',
@@ -67,8 +67,8 @@ function register_director_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'wp_kses_post'
     ) );
     $wp_customize->add_control( 'director_career', array(
-        'label' => '의료진 약력',
-        'description' => '한 줄에 하나씩 입력',
+        'label' => esc_html__( '의료진 약력', 'luvia' ),
+        'description' => esc_html__( '한 줄에 하나씩 입력', 'luvia' ),
         'type' => 'textarea',
         'section' => 'director_info',
         'settings' => 'director_career',
@@ -84,7 +84,7 @@ function register_director_setting_customize( $wp_customize ) {
         $wp_customize,
         'director_image',
         array(
-            'label' => '이미지 업로드',
+            'label' => esc_html__( '이미지 업로드', 'luvia' ),
             'section' => 'director_info',
             'settings' => 'director_image',
             'priority' => 5

@@ -556,6 +556,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  object-fit: cover;
+}
+
 .only-mob {
   display: none;
 }
@@ -1306,7 +1310,6 @@ button {
 .event__image {
   width: 40rem;
   height: 30rem;
-  object-fit: cover;
 }
 .event__cta {
   padding: 1rem 5rem;

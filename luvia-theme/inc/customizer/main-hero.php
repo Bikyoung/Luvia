@@ -2,7 +2,7 @@
 // hero 영역을 Customizer에서 관리할 수 있도록 설정 항목을 등록하는 함수 
 function register_hero_setting_customize( $wp_customize ) {
     $wp_customize->add_section( 'hero_info', array(
-        'title' => '비주얼 영역 정보 관리',
+        'title' => esc_html__( '비주얼 영역 정보 관리', 'luvia' ),
         'panel' => 'main_page_panel',
         'priority' => 1
     ) );
@@ -16,7 +16,7 @@ function register_hero_setting_customize( $wp_customize ) {
         $wp_customize,
         'hero_bg',
         array(
-            'label' => '배경 이미지 업로드',
+            'label' => esc_html__( '배경 이미지 업로드', 'luvia' ),
             'section' => 'hero_info',
             'settings' => 'hero_bg',
             'priority' => 1
@@ -29,8 +29,8 @@ function register_hero_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'hero_title_line1', array(
-        'label' => '비주얼 영역 큰 제목 (첫번째 줄)',
-        'description' => '영어 제목 권장',
+        'label' => esc_html__( '비주얼 영역 큰 제목 (첫번째 줄)', 'luvia' ),
+        'description' => esc_html__( '영어 제목 권장', 'luvia' ),
         'type' => 'text',
         'section' => 'hero_info',
         'settings' => 'hero_title_line1',
@@ -43,8 +43,8 @@ function register_hero_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'hero_title_line2', array(
-        'label' => '비주얼 영역 큰 제목 (두번째 줄)',
-        'description' => '영어 제목 권장',
+        'label' => esc_html__( '비주얼 영역 큰 제목 (두번째 줄)', 'luvia' ),
+        'description' => esc_html__( '영어 제목 권장', 'luvia' ),
         'type' => 'text',
         'section' => 'hero_info',
         'settings' => 'hero_title_line2',
@@ -57,8 +57,8 @@ function register_hero_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'hero_subtitle_line1', array(
-        'label' => '비주얼 영역 작은 제목 (첫번째 줄)',
-        'description' => '한글 제목 권장',
+        'label' => esc_html__( '비주얼 영역 작은 제목 (첫번째 줄)', 'luvia' ),
+        'description' => esc_html__( '한글 제목 권장', 'luvia' ),
         'type' => 'text',
         'section' => 'hero_info',
         'settings' => 'hero_subtitle_line1',
@@ -71,8 +71,8 @@ function register_hero_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'hero_subtitle_line2', array(
-        'label' => '비주얼 영역 작은 제목 (두번째 줄)',
-        'description' => '한글 제목 권장',
+        'label' => esc_html__( '비주얼 영역 작은 제목 (두번째 줄)', 'luvia' ),
+        'description' => esc_html__( '한글 제목 권장', 'luvia' ),
         'type' => 'text',
         'section' => 'hero_info',
         'settings' => 'hero_subtitle_line2',

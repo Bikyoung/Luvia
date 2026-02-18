@@ -2,7 +2,7 @@
 // about 영역을 Customizer에서 관리할 수 있도록 설정 항목을 등록하는 함수
 function register_about_setting_customize( $wp_customize ) {
     $wp_customize->add_section( 'about_info', array(
-        'title' => '병원 소개 영역 정보 관리',
+        'title' => esc_html__( '병원 소개 영역 정보 관리', 'luvia' ),
         'panel' => 'main_page_panel',
         'priority' => 2
     ) );    
@@ -13,7 +13,7 @@ function register_about_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'about_subtitle', array (
-        'label' => '병원 소개 영역 작은 제목',
+        'label' => esc_html__( '병원 소개 영역 작은 제목', 'luvia' ),
         'type' => 'text',
         'section' => 'about_info',
         'settings' => 'about_subtitle',
@@ -26,7 +26,7 @@ function register_about_setting_customize( $wp_customize ) {
         'sanitize_callback' => 'sanitize_text_field'
     ) );
     $wp_customize->add_control( 'about_title', array (
-        'label' => '병원 소개 영역 큰 제목',
+        'label' => esc_html__( '병원 소개 영역 큰 제목', 'luvia' ),
         'type' => 'text',
         'section' => 'about_info',
         'settings' => 'about_title',
@@ -47,7 +47,7 @@ function register_about_setting_customize( $wp_customize ) {
         ) );
 
         $wp_customize->add_control( 'about_desc' . $i, array(
-            'label' => '병원 소개글' . ( $i + 1 ),
+            'label' => esc_html__( '병원 소개글' . ( $i + 1 ), 'luvia' ),
             'type' => 'textarea',
             'section' => 'about_info',
             'settings' => 'about_desc' . $i,
@@ -64,7 +64,7 @@ function register_about_setting_customize( $wp_customize ) {
         $wp_customize,
         'about_image',
         array(
-            'label' => '이미지 업로드',
+            'label' => esc_html__( '이미지 업로드', 'luvia' ),
             'section' => 'about_info',
             'settings' => 'about_image',
             'priority' => 6
