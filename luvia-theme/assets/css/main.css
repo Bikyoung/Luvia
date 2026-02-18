@@ -182,7 +182,7 @@ h1, .sub-title {
 }
 
 .menu-item a {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.01em;
@@ -190,17 +190,17 @@ h1, .sub-title {
 }
 @media (max-width: 1023px) {
   .menu-item a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 767px) {
   .menu-item a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 479px) {
   .menu-item a {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -734,33 +734,64 @@ img {
   }
 }
 
-.header__container, .footer__container, .slide-menu__head {
-  padding-top: 3rem;
+.header__container, .slide-menu__head {
+  padding-top: 1.5rem;
 }
 @media (max-width: 1023px) {
-  .header__container, .footer__container, .slide-menu__head {
-    padding-top: 2.5rem;
+  .header__container, .slide-menu__head {
+    padding-top: 1rem;
   }
 }
 @media (max-width: 767px) {
-  .header__container, .footer__container, .slide-menu__head {
-    padding-top: 2rem;
+  .header__container, .slide-menu__head {
+    padding-top: 0.8rem;
   }
 }
-.header__container, .footer__container, .slide-menu__head {
-  padding-bottom: 3rem;
+.header__container, .slide-menu__head {
+  padding-bottom: 1.5rem;
 }
 @media (max-width: 1023px) {
-  .header__container, .footer__container, .slide-menu__head {
-    padding-bottom: 2.5rem;
+  .header__container, .slide-menu__head {
+    padding-bottom: 1rem;
   }
 }
 @media (max-width: 767px) {
-  .header__container, .footer__container, .slide-menu__head {
-    padding-bottom: 2rem;
+  .header__container, .slide-menu__head {
+    padding-bottom: 0.8rem;
   }
 }
-.header__container, .footer__container, .slide-menu__head {
+.header__container, .slide-menu__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__container {
+  padding-top: 6rem;
+}
+@media (max-width: 1023px) {
+  .footer__container {
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer__container {
+    padding-top: 4rem;
+  }
+}
+.footer__container {
+  padding-bottom: 6rem;
+}
+@media (max-width: 1023px) {
+  .footer__container {
+    padding-bottom: 5rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer__container {
+    padding-bottom: 4rem;
+  }
+}
+.footer__container {
   display: flex;
   justify-content: space-between;
 }
@@ -838,17 +869,17 @@ img {
   }
 }
 .hero {
-  padding-top: 10.2rem;
+  padding-top: 7rem;
   background-color: #FFFFFF;
 }
 @media (max-width: 1023px) {
   .hero {
-    padding-top: 9rem;
+    padding-top: 6rem;
   }
 }
 @media (max-width: 767px) {
   .hero {
-    padding-top: 8rem;
+    padding-top: 5.6rem;
   }
 }
 .hero__container {

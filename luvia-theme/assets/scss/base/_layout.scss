@@ -24,9 +24,17 @@
     }
 }
 
-.header__container, .footer__container, .slide-menu__head {
-    @include abs.resSpacing(padding-top, spacing-sm);
-    @include abs.resSpacing(padding-bottom, spacing-sm);
+.header__container, .slide-menu__head {
+    @include abs.resSpacing(padding-top, spacing-xs);
+    @include abs.resSpacing(padding-bottom, spacing-xs);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__container {
+    @include abs.resSpacing(padding-top, spacing-md);
+    @include abs.resSpacing(padding-bottom, spacing-md);
 
     display: flex;
     justify-content: space-between;

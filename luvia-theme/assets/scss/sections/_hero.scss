@@ -3,15 +3,15 @@
 .hero {
     @include abs.resSpacing(padding, spacing-sm);
 
-    padding-top: 10.2rem;
+    padding-top: 7rem;
     background-color: map-get(abs.$colors, white-50);
     
     @media (max-width: map-get(abs.$break-points, laptop)) {
-        padding-top: 9rem;
+        padding-top: 6rem;
     }
 
     @media (max-width: map-get(abs.$break-points, tablet)) {
-        padding-top: 8rem;
+        padding-top: 5.6rem;
     }
 
     &__container {

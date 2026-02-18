@@ -30,7 +30,7 @@ h1, .sub-title {
 }
 
 .menu-item a {
-    @include abs.fontStyle(body2, 600, 1.4, 0.01em, map-get(abs.$colors, black));      
+    @include abs.fontStyle(body3, 600, 1.4, 0.01em, map-get(abs.$colors, black));      
 }
 
 // --------------- hero ---------------
