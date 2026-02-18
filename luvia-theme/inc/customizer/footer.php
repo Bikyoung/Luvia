@@ -40,7 +40,7 @@ function register_footer_setting_customize( $wp_customize ) {
     // 위치 섹션 내용
     $wp_customize->add_setting( 'address_desc', array(
         'default' => '인천광역시 남동구 인주대로 593 엔타스빌딩 12층',
-        'sanitize_callback' => 'sanitize_textarea_field'
+        'sanitize_callback' => 'wp_kses_post'
     ) );
     $wp_customize->add_control( 'address_desc', array(
         'label' => esc_html__( '위치 섹션 내용', 'luvia' ),
@@ -49,6 +49,20 @@ function register_footer_setting_customize( $wp_customize ) {
         'section' => 'footer_info',
         'settings' => 'address_desc',
         'priority' => 2
+    ) );
+
+    // 카카오 맵 api 키
+    $wp_customize->add_setting( 'kakaomap_api_key', array (
+        'default' => 'abcdefghijklmnopqrstuvwxyz123456',
+        'sanitize_callback' => 'sanitize_text_field'
+    ));
+    $wp_customize->add_control( 'kakaomap_api_key', array(
+        'label' => esc_html__( '카카오 맵 api 키', 'luvia' ),
+        'description' => esc_html__( '카카오 맵의 javascript api 키를 입력하세요', 'luvia' ),
+        'type' => 'text',
+        'section' => 'footer_info',
+        'settings' => 'kakaomap_api_key',
+        'priority' => 3
     ) );
 
     // 연락처 섹션 제목
@@ -62,7 +76,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_title',
-        'priority' => 3
+        'priority' => 4
     ) );
 
     // 대표 번호
@@ -75,7 +89,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_tel',
-        'priority' => 4
+        'priority' => 5
     ) );
 
     // 팩스 번호 
@@ -88,7 +102,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_fax',
-        'priority' => 5
+        'priority' => 6
     ) );
     
     // 대표자 
@@ -101,7 +115,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_owner',
-        'priority' => 6
+        'priority' => 7
     ) );
 
     // 사업자등록번호 
@@ -114,7 +128,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_reg_num',
-        'priority' => 7
+        'priority' => 8
     ) );
 
     // 이메일
@@ -127,7 +141,7 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_email',
-        'priority' => 8
+        'priority' => 9
     ) );
 
     // 의료심의필번호
@@ -140,6 +154,6 @@ function register_footer_setting_customize( $wp_customize ) {
         'type' => 'text',
         'section' => 'footer_info',
         'settings' => 'contact_copy',
-        'priority' => 9
+        'priority' => 10
     ) );
 }

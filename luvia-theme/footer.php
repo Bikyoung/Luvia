@@ -32,7 +32,7 @@
                         <?php echo esc_html( get_theme_mod( 'address_title', '오시는 길' ) ); ?>
                     </h3>
                     <p class="footer__desc footer__location-desc">
-                        <?php echo nl2br( esc_html( get_theme_mod( 'address_desc', '인천광역시 남동구 인주대로 593 엔타스빌딩 12층' ) ) ); ?>
+                        <?php echo nl2br( wp_kses_post( get_theme_mod( 'address_desc', '인천광역시 남동구 인주대로 593 엔타스빌딩 12층' ) ) ); ?>
                     </p>
                 </div>
                 <div class="footer__location-map"></div>
