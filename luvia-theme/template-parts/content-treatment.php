@@ -47,9 +47,9 @@ $treatment_arr = get_theme_mod( 'treatment_repeater', $default_arr );
             <div class="flex-center treatment__tab-list" role="tablist">
                 <?php 
                 foreach( $treatment_arr as $idx => $treatment_item) :
-                    $panel_title = $treatment_item['panel_title'];
-                    $panel_desc = $treatment_item['panel_desc'];
-                    $panel_image = $treatment_item['panel_image'];
+                    $panel_title = $treatment_item[ 'panel_title' ];
+                    $panel_desc = $treatment_item[ 'panel_desc' ];
+                    $panel_image = $treatment_item[ 'panel_image' ];
                 ?>
                 <button class="treatment__tab-item" role="tab" aria-selected="<?php echo ($idx === 0) ? 'true' : 'false' ?>">
                     <?php echo esc_html( $panel_title ); ?>
@@ -61,9 +61,9 @@ $treatment_arr = get_theme_mod( 'treatment_repeater', $default_arr );
             <ul class="treatment__pannel-list">
                 <?php 
                 foreach( $treatment_arr as $idx => $treatment_item) :
-                    $panel_title = $treatment_item['panel_title'];
-                    $panel_desc = $treatment_item['panel_desc'];
-                    $panel_image = $treatment_item['panel_image'];
+                    $panel_title = $treatment_item[ 'panel_title' ];
+                    $panel_desc = $treatment_item[ 'panel_desc' ];
+                    $panel_image = $treatment_item[ 'panel_image' ];
                 ?>
                     <li class="treatment__panel <?php echo ($idx === 0) ? 'show' : 'hidden' ?>" role="tabpanel">
                         <div class="treatment__panel-text">

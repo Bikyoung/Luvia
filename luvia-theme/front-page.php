@@ -5,6 +5,7 @@
     get_template_part( '/template-parts/content', 'about' );      // about 영역
     get_template_part( '/template-parts/content', 'director' );   // director 영역
     get_template_part( '/template-parts/content', 'treatment' );  // treatment 영역
+    get_template_part( '/template-parts/content', 'equipment' );  // equipment 영역
     get_template_part( '/template-parts/content', 'event' );      // event 영역
     ?>  
 </main>

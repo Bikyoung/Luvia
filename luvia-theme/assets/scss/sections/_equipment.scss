@@ -1,7 +1,7 @@
 @use "../abstracts/bundle" as abs;
 
 .equipment {
-    background-color: rgba(221, 238, 237, 0.1);
+    background-color: map-get(abs.$colors, white-50);
 
     &__container {
         @include abs.resSpacing(gap, spacing-xl);

@@ -16,6 +16,7 @@ require_once $inc_path . '/customizer/main-hero.php';
 require_once $inc_path . '/customizer/main-about.php';
 require_once $inc_path . '/customizer/main-director.php';
 require_once $inc_path . '/customizer/main-treatment.php';
+require_once $inc_path . '/customizer/main-equipment.php';
 require_once $inc_path . '/customizer/main-event.php';
 require_once $inc_path . '/customizer/footer.php';
 
@@ -32,8 +33,9 @@ function register_luvia_theme_customize( $wp_customize ) {
     register_hero_setting_customize( $wp_customize );       // hero 영역 정보 설정 항목 등록 
     register_about_setting_customize( $wp_customize );      // about 영역 정보 설정 항목 등록
     register_director_setting_customize( $wp_customize );   // director 영역 정보 설정 항목 등록
-    register_treatment_setting_customize( $wp_customize );   // treatment 영역 정보 설정 항목 등록
-    register_event_setting_customize($wp_customize);        // event 영역 정보 설정 항목 등록
+    register_treatment_setting_customize( $wp_customize );  // treatment 영역 정보 설정 항목 등록
+    register_equipment_setting_customize( $wp_customize );  // equipment 영역 정보 설정 항목 등록
+    register_event_setting_customize( $wp_customize );        // event 영역 정보 설정 항목 등록
     register_footer_setting_customize( $wp_customize );     // 푸터 정보 설정 항목 등록
 }
 ?>

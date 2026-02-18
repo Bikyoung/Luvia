@@ -18,7 +18,7 @@
                         $image_id = 'event_image' . $i;
                         $desc_id = 'event_desc' . $i;
                         $default_image_url = $event_image_path . $i . '.webp';
-                        $default_desc = $default_desc_array[$i - 1];
+                        $default_desc = $default_desc_array[ $i - 1 ];
                     ?>
                         <li class="flex-center event__item">
                             <img src="<?php echo esc_url( get_theme_mod( $image_id, $default_image_url ) ); ?>" class="event__image" alt="이벤트 이미지">

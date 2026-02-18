@@ -839,6 +839,7 @@ img {
 }
 .hero {
   padding-top: 10.2rem;
+  background-color: #FFFFFF;
 }
 @media (max-width: 1023px) {
   .hero {
@@ -1157,7 +1158,7 @@ img {
 }
 
 .equipment {
-  background-color: rgba(221, 238, 237, 0.1);
+  background-color: #FFFFFF;
 }
 .equipment__container {
   gap: 12rem;

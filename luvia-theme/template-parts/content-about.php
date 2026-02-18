@@ -21,7 +21,7 @@ $default_about_desc = array(
                 for($i = 0; $i < 3; $i++) :
                 ?>
                     <p class="desc about__desc-item">
-                        <?php echo nl2br( wp_kses_post( get_theme_mod( 'about_desc' . $i, $default_about_desc[$i] ) ) ); ?>
+                        <?php echo nl2br( wp_kses_post( get_theme_mod( 'about_desc' . $i, $default_about_desc[ $i ] ) ) ); ?>
                     </p>
                 <?php
                 endfor;

@@ -46,6 +46,18 @@ function register_treatment_setting_customize($wp_customize) {
         'priority' => 3
     ) );
 
+    // cta 버튼
+    $wp_customize->add_setting( 'treatment_cta', array(
+        'default' => '진료 예약하기',
+        'sanitize_callback' => 'sanitize_text_field'
+    ) );
+    $wp_customize->add_control( 'treatment_cta', array(
+        'label' => esc_html__( '진료 예약 버튼', 'luvia' ),
+        'section' => 'treatment_info',
+        'settings' => 'treatment_cta',
+        'priority' => 4
+    ) );
+
     // 탭과 패널
     $image_path = get_template_directory_uri() . '/assets/images';
 
@@ -58,13 +70,13 @@ function register_treatment_setting_customize($wp_customize) {
         /* Kirki의 add_field()는 add_setting()과 add_control()을 한 번에 수행하며,
            settings 속성 값으로 add_setting()의 id를 설정 */
         'settings' => 'treatment_repeater', 
-        'priority' => 4,
+        'priority' => 5,
         // 각 리피터 항목의 레이블
         'row_label' => array(
             'type' => 'field',         // 고정 값이 아닌 필드의 값을 사용
             'field' => 'panel_title'   // 어떠한 필드의 값을 사용할 것인지 지정
         ),
-        'button_label' => esc_html__( '새 진료 과목 추가', 'luvia' ),
+        'button_label' => esc_html__( '진료 과목 추가', 'luvia' ),
         // 초기 리피터 항목 기본값 
         'default' => array( 
             array(
@@ -117,17 +129,4 @@ function register_treatment_setting_customize($wp_customize) {
             )
         )
     ) );    
-
-
-    // cta 버튼
-    $wp_customize->add_setting( 'treatment_cta', array(
-        'default' => '진료 예약하기',
-        'sanitize_callback' => 'sanitize_text_field'
-    ) );
-    $wp_customize->add_control( 'treatment_cta', array(
-        'label' => esc_html__( '진료 예약 버튼', 'luvia' ),
-        'section' => 'treatment_info',
-        'settings' => 'treatment_cta',
-        'priority' => 9
-    ) );
 }

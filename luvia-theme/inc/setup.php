@@ -7,7 +7,7 @@ function setup_luvia_theme() {
     ) );
 
     // title 태그를 브라우저에 자동으로 표시
-    add_theme_support('title-tag');
+    add_theme_support( 'title-tag' );
 
     // 로고 커스텀 기능 활성화
     add_theme_support( 'custom-logo', array(

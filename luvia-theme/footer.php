@@ -54,14 +54,14 @@
                         );
 
                         foreach ( $contact_items as $id => $info ) :
-                            $value = get_theme_mod( $id, $info['default']);
+                            $value = get_theme_mod( $id, $info[ 'default' ]);
 
                             // 값이 존재하는 경우만 화면에 출력
                             if( ! empty( $value ) ) :
                         ?>
                                 <li>
                                     <span class="footer__label">
-                                        <?php echo esc_html( $info['label'] ); ?>
+                                        <?php echo esc_html( $info[ 'label' ] ); ?>
                                     </span>
                                     <span class="footer__desc">
                                         <?php echo esc_html( $value ); ?>
