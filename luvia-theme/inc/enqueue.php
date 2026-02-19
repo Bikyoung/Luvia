@@ -59,7 +59,7 @@ function wp_enqueue_assets() {
     wp_enqueue_script(
         'index-js',
         get_template_directory_uri() . '/assets/js/index.js',
-        array('aos-js', 'swiper-js', 'kakao-map-js'),
+        array('aos-js', 'swiper-js' ),
         filemtime(get_template_directory() . '/assets/js/index.js'),
         true
     );
